@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular example</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+    <body background="cal.jpg">
+    <script>
+        alert('Simple Calculator by.5635512057')
+    </script>
+	<center>
+	<div ng-app="myApp">
+    	<div ng-controller="myCtrl">
+    	<table>
+        <table width=90% cellpadding="4" cellspacing="0" style="border:double 5px black;"><tr><td style="border:double 5px black;"><center><h2>=====>>Simple Calculator<<=====</h2></center></td></tr></table>
+    	</br></br>
+    	<tr>
+    		<td><h2>NUM1:</h2></td>
+    		<td><input type="text" ng-model="num1" /></td>
+    	</table>
+        </br>
+    		<button ng-click='add()' style="background-color:red">+</button>
+    		<button ng-click='add()' style="background-color:yellow">-</button>
+    		<button ng-click='add()' style="background-color:green">*</button>
+    		<button ng-click='add()' style="background-color:white">/</button>
+    	</br>
+        <table>
+    	<tr>
+    		<td><h2>NUM2:</h2></td>
+    		<td><input type="text" ng-model="num2" /></td>
+    	</table>
+     	   RESULT:{{num1+ " " +num2}}<br/>
+     	   <br/><br/><br/>
+     	   {{myfunc()}}<br/>
+    	</div>
+	</div>	
+	<script >var app = angular.module('myApp', [])
+		app.controller('myCtrl', function($scope){
+   		//$scope.greeting = "Hello world";			
+	});
+	</script>
+</body>
+</html>

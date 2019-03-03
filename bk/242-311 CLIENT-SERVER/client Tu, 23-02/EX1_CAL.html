@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>โปรแกรมคำนวณ</title>
+
+<script type='text/javascript'>
+function nStr(){
+    var int1 =document.getElementById('input1').value;
+    var int2=document.getElementById('input2').value;    
+    var n1 = parseInt(int1);
+    var n2 = parseInt(int2);        
+    var show=document.getElementById('show');
+    
+     if (isNaN(n1)){    
+          document.getElementById("show").setAttribute("color","red");       
+          show.innerHTML="ERROR"
+         if (int2.length>0){
+             if (isNaN(int1)){
+                 document.getElementById("show").setAttribute("color","red");
+                 show.innerHTML="ERROR"
+             }  
+             else if (isNaN(int2)){
+                 document.getElementById("show").setAttribute("color","red");
+                 show.innerHTML="ERROR"
+             }           
+             else  if (int1.length >0){
+                   document.getElementById("show").setAttribute("color","Blue");    
+                 show.innerHTML=n1+n2;
+             }            
+             else if (int2.length>0){
+                 document.getElementById("show").setAttribute("color","Blue");    
+                 show.innerHTML=n2;
+             }
+          }   
+       }          
+     else if (int1.length > 0) {     
+         if (isNaN(int2)){
+               document.getElementById("show").setAttribute("color","red");
+               show.innerHTML="ERROR"
+         }    
+         else if (int2.length >0){
+               document.getElementById("show").setAttribute("color","Blue");    
+               show.innerHTML=n1+n2;
+         }                     
+         else if (int1.length > 0){
+               document.getElementById("show").setAttribute("color","Blue");    
+               show.innerHTML=n1;
+       }            
+     }
+   }
+   function addCommas(nStr) //ฟังชั่้นเพิ่ม คอมม่าในการแสดงเลข
+    {
+        nStr += '';
+        x = nStr.split('.');
+        show = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+        show = show.replace(rgx, '$1' + ',' + '$2');
+        }
+        return x1 + x2;
+    }
+</script>
+</head>
+
+<body>
+<center>
+<p><b>โปรแกรมคำนวณบวกเลข</b></p>
+      Input1 :<input type='text' id='input1' onkeyup='nStr()'> <br />
+      Input2 :<input type='text' id='input2' onkeyup='nStr()'><br />
+      ผลลัพธ์  : <font id="show" color=""></font>  
+</center>
+</body>
+</html>

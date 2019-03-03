@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BASIC CALCULATOR by.057</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <table width=30.5% cellpadding="4" cellspacing="0" style="border:double 5px black;">
+            <tr><td style="border:double 5px yellow;">
+                    <h2>=====>>Simple Calculator<<=====</h2>
+                </td>
+            </tr>
+        </table></br>
+    	<table>
+    		<tr>
+    			<td><h2>Number1:</h2></td>
+    			<td><input type="number" ng-model="num1"/></td>
+    		</tr>
+        </table>
+        <table>
+    		<tr>
+    			<td><h2>Number2:</h2></td>
+    			<td><input type="number" ng-model="num2"/></td>
+    		</tr>
+    	</table>
+        <button ng-click="ans = num1+num2" style="background-color:red">+</button>
+        <button ng-click="ans = num1-num2" style="background-color:yellow">-</button>
+        <button ng-click="ans = num1*num2" style="background-color:green">*</button>
+        <button ng-click="ans = num1/num2" style="background-color:white">/</button>
+    	<h2>{{ "Results :"+ ans }} </h2><br/>
+    </div></div>	
+    <script>
+       var ans=0;
+	   var app = angular.module('myApp', [])
+	   app.controller('myCtrl', function($scope){
+    	   $scope.ans = "0";
+    });
+    </script>
+</body>
+</html>

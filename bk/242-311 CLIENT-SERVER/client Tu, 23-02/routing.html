@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test route</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp">
+		<ul>
+			<li><a href='#phones'>Add new</a></li>
+			<li><a href="#phones/23">Detail</a></li>
+		</ul>
+	</div>
+	<script >
+		var app = angular.module('myApp', ['ngRoute']);
+		app.conFIG(['$routeProvider', function($routeProvider){
+			$routeProvider.
+				when('/phone',{
+					templateUrl: 'list.html',
+					controller: 'listCtrl'
+				})
+				when('/phones/:phoneId',{
+					templateUrl: 'detail.html',
+					controller: 'DetailCtrl'
+				})
+				otherwire({
+					redirestTo: '/phones'
+				})
+		}]);
+
+		app.controller('listCtrl', function($scope) {
+			$scope.message = 'Message from ListCtrl';
+		});
+
+		app.controller('DetailCtrl', function($scrope, $routeParems){
+			$scope.phoneId = $routeParems.phoneId;
+			$scope.message = 'Message from DetailCtrl';
+		});
+	</script>
+</body>
+</html>

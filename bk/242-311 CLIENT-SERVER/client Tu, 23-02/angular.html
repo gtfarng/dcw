@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular example</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp">
+    	<div ng-controller="myCtrl">
+    	<table>
+    	<h2>=====>>My Profile<<=====</h2>
+    	<tr>
+    		<td>Name:</td>
+    		<td><input type="text" ng-model="name" /></td>
+    	<tr>
+    		<td>Surname:</td>
+    		<td><input type="text" ng-model="surname" /></td>
+
+    	<tr>
+    		<td>Student ID:</td>
+    		<td><input type="text" ng-model="pass" /></td>
+    	</tr>
+    		
+
+    	</table>
+
+     	   {{name+ " " +surname+pass}}<br/>
+     	   <br/><br/><br/>
+     	   {{myfunc()}}<br/>
+    	</div>
+    	<div ng-init="l1='Label1';l2='Label2'">
+    		<div ng-bind="l1"></div>
+    		<div ng-bind="l2"></div>
+    		{{ 10+20+30 }}
+    	</div>
+	</div>	
+	
+	<script >var app = angular.module('myApp', [])
+		app.controller('myCtrl', function($scope){
+   		$scope.greeting = "Hello world";
+   			$scope.name = "Akaporn";
+   			$scope.surname = "Sripanrod";
+   			$scope.pass="5635512057";
+   			$scope.myfunc = function(){
+   				console.log('My function');
+   				return "My function";
+   			}
+	});
+	</script>
+</body>
+</html>

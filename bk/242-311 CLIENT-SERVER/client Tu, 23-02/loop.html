@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test repeat</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+
+	<div ng-app="myApp" ng-controller="ctrl">
+	Email:<input type="text" ng-model='newcontact' /><br/>
+	<button ng-click='add()' style="background-color:red">Add</button><br/>
+	<h2>Contact list</h2>
+	<ul>
+		<li ng-repeat="contact in contacts track by $index">{{contact}}</li>
+	</ul>
+		
+	</div>
+
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('ctrl', function($scope){
+			$scope.contacts = ['1','2','3'];
+
+			$scope.add = function(){
+				//$scope.contacts.push($scope.newcontact);
+				for(var i=4;i<1000;i++)
+				$scope.contacts.push(i);
+				
+			}
+			
+		});
+	</script>
+</body>
+</html>
