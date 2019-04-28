@@ -1,0 +1,43 @@
+RPC & REST
+--------------------
+
+Procedure 
+RPC Model
+Characteristics
+Features
+Limitations
+Issues
+Marshalling
+Unmarshalling
+
+Remote Procedure Call (RPC) 
+Common Data Representation (CDR) 
+Application Programming Interface (APIs)
+JSON-RPC
+XML-RPC
+Simple Object Access Protocol  (SOAP)
+Representational state transfer (REST) RESTful
+Hypertext Transfer Protocol (HTTP:80) 
+Hypertext Transfer Protocol Secure  (HTTPS:443) 
+HTTP .GET => render
+HTTP .POST => add
+HTTP .PUT => update
+HTTP .DELETE => delete
+JavaScript Object Notation (JSON)
+Extensible Markup Language (XML)
+
+
+Modules=> 	Backend
+ 	-Cross Origin Resource Sharing (CORS)
+ 	-router
+ 	-express
+ 	-body-parser
+ 		frontend
+ 	-Axios
+ 	-Redux (Provider)
+ 	-React-Redux (createStore,combineReducers)
+ 	-Redux-logger (Log)
+ 	-Redux-thunk (asynchronous action)
+Redux	=>	Components (View)
+		Actions (Event)
+		Reducers (Data)
