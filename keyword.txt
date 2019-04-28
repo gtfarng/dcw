@@ -1,3 +1,4 @@
+--------------------
 RPC & REST
 --------------------
 
@@ -41,3 +42,92 @@ Modules=> 	Backend
 Redux	=>	Components (View)
 		Actions (Event)
 		Reducers (Data)
+--------------------
+Web Security
+--------------------
+Authentication
+Authorization
+Access control
+BASIC Authentication
+Form-based Authentication
+Basic password scheme (Hash,RSA)
+Secure Sockets Layer (SSL) (HTTPS:443) Cloudfare
+CA Root Certificate
+Certificate Authority(CA)
+Private key
+Public Key
+Open Authorization (OAuth)
+Tokens
+Authorization Flows
+-Server Side Web Application Flow
+-User Agent (Browser) Application Flow
+-Resource Owner Password Flow
+-Client Credentials Flow
+Passport (middle ware)
+Router (route path)
+
+--------------------
+Web Infrastructure
+--------------------
+Cloud Computing
+-Infrastructure as a service (IaaS)
+-Platform as a service (PaaS)
+-Software as a service (SaaS)
+
+Serverless (Firebase & Cloud Functions)
+EX
+-DigitalOcean
+-Firebase
+ 	-Authentication
+ 	-Hosting
+ 	-Storage
+ 	-Remote Config
+ 	-Crash Reporting
+ 	-Dynamic Links
+ 	-Notifications
+--------------------
+Web Deployment
+--------------------
+Production Environment
+-production
+PM2
+Reverse Proxy
+Load Balancer
+Hypervisor-based Virtualization (VMwares , Virtualboxs)
+Docker
+-container
+-compose
+Load Test
+-K6
+-influxdb
+-grafana
+
+--------------------
+Blockchain
+--------------------
+Trust and problem
+-centralised
+-distributed
+Why Blockchains
+Blockchains
+-Database with some special features
+How it works
+-Members
+-Ledgers
+-Block
+Blocks are chained (Linked)
+Nonces
+Mining
+Distributed Blocks
+Blockchain benefits
+-Traceability
+-Enhanced security
+-Efficiency and speed
+-Reduced costs 
+Blockchain types
+-Public Blockchains
+-Private Blockchains (or Permissioned Blockchains)
+Hyperledger composer
+-Hyperledger Composer & Fabric
+Scenario: carauction
+
